@@ -69,9 +69,12 @@ def prem3(p):
             ###     EXERCICE 4     ###
 
 def prim(n):
+    var=True
     for i in range (2, int(sqrt(n))+1):
         if n%i==0:
-            print(n,"n'est pas premier")
+            var=False
             break
-        else:
-            print(n,"est premier")
+    if var==False:
+        print(n,"n'est pas premier")
+    if var==True:
+        print(n, "est premier")
