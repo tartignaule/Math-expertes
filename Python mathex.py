@@ -1,4 +1,4 @@
-﻿import math
+﻿from math import *
 
 
             ###     EXERCICE 1     ###
@@ -50,6 +50,8 @@ def prem2(p):
     else:
         print("Le nombre ",p," n'est pas premier")
 
+
+    # Fonction donnant la liste des nombres premiers de 1 au nombre choisi p
 def prem3(p):
     L=list(range(1,p))
     for i in range (1,p):
@@ -57,9 +59,19 @@ def prem3(p):
             if i%d==0:
                 L.remove(i)
                 break
-    fichier = open("nombres premier.txt", "w")
+    fichier = open("nombres premiers.txt", "w")
     L2=str(L)
     fichier.write(L2)
     fichier.close
-    print(len(L))
-    return L
+    return len(L)
+
+    
+            ###     EXERCICE 4     ###
+
+def prim(n):
+    for i in range (2, int(sqrt(n))+1):
+        if n%i==0:
+            print(n,"n'est pas premier")
+            break
+        else:
+            print(n,"est premier")
